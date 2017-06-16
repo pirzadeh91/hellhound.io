@@ -1,12 +1,19 @@
-title: Project Title
-description: Description
-homepage: http://somedomain.com
+title: HellHound
+description: Fullstack clojure/Script web framework on top Pedestal
+homepage: http://hellhound.io
 show_logo: false
 show_downloads: true
 show_title: true
 show_description: true
 
 google_analytics: [Your Google Analytics tracking ID]
+
+repository: codamic/hellhound
+zip_url: https://github.com/Codamic/hellhound
+tar_url: https://github.com/Codamic/hellhound
+
+github:
+  url: /codamic/hellhound
 
 permalink: /:categories/:title/
 markdown: kramdown
@@ -16,8 +23,5 @@ theme: jekyll-theme-minimal
 
 menu:
   -
-    title: "sam"
-    url: "/asdasd"
-  -
-    title: "somethin"
-    url: "/dasdasd"
+    title: "Documents"
+    url: "/documents"

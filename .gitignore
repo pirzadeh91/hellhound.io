@@ -1,6 +1,7 @@
 *.pxm
 .DS_Store
 _site
+_site/
 *.sketch
 .vscode
 blog/readable-clojure/originals/*
