@@ -1,0 +1,23 @@
+title: Project Title
+description: Description
+homepage: http://somedomain.com
+show_logo: false
+show_downloads: true
+show_title: true
+show_description: true
+
+google_analytics: [Your Google Analytics tracking ID]
+
+permalink: /:categories/:title/
+markdown: kramdown
+
+theme_color: hsl(215, 50%, 55%)
+theme: jekyll-theme-minimal
+
+menu:
+  -
+    title: "sam"
+    url: "/asdasd"
+  -
+    title: "somethin"
+    url: "/dasdasd"

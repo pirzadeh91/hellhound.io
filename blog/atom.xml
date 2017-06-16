@@ -1,0 +1,42 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+ 
+  <title>tonsky.me</title>
+  <subtitle>Nikita Prokopov’s blog</subtitle>
+  <link type="application/atom+xml" href="http://tonsky.me/blog/atom.xml" rel="self" />
+  <link rel="alternate" type="text/html" href="http://tonsky.me/" />
+  <id>http://tonsky.me/</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>Nikita Prokopov</name>
+    <email>prokopov@gmail.com</email>
+  </author>
+ 
+  {% for post in site.posts %}
+    <entry>
+      <title>{{ post.title }}</title>
+      <link rel="alternate" type="text/html" href="http://tonsky.me{{ post.url }}" />
+      <id>http://tonsky.me{{ post.url }}</id>
+      <published>{{ post.date | date_to_xmlschema }}</published>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      {% if post.summary %}
+        <summary> type="html"><![CDATA[
+          {{ post.summary }}
+        ]]></summary>
+      {% endif %}
+      <content type="html"><![CDATA[
+        {% assign rel_prefix = 'href="http://tonsky.me' | append: post.url %}
+        {% assign img_rel_prefix = 'src="http://tonsky.me' | append: post.url | append:'rss/' %}
+        {{ post.content | replace:'src="./',img_rel_prefix | replace:'href="./',rel_prefix | replace:'src="/','src="http://tonsky.me/rss/' | replace:'href="/','href="http://tonsky.me/' }}
+      ]]></content>  
+      <author>
+        <name>Nikita Prokopov</name>
+        <email>prokopov@gmail.com</email>
+      </author>
+    </entry>
+  {% endfor %}
+ 
+</feed>
