@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" xmlns:og="http://opengraphprotocol.org/schema/">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <title>HellHound</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=7bc5d2d4e95bcd68ed6c9a9a8d9a9618fbb0c1d3">
+    <meta name="viewport" content="width=device-width">
+
+    <meta name="theme-color" content="">
+
+    <link href="/articles/atom.xml" rel="alternate" title="’s feed" type="application/atom+xml" />
+
+    <meta name="author" content="Sameer Rahmani" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="http://hellhound.io/" />
+    
+
+    
+
+    <meta property="og:site_name" content="http://hellhound.io" />
+    
+
+    <meta name="twitter:creator" content="@lxsameer" />
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        
+
+        
+        <h1>HellHound</h1>
+        
+
+        
+        <p>Fullstack clojure/Script web framework on top Pedestal</p>
+        
+
+        
+          <p class="view"><a href="http://github.com/codamic/hellhound">View the Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+          <p class="view"><a  href="/documents">Documents</a></p>
+        
+
+        
+          <ul>
+            <li><a href="http://github.com/codamic/hellhound/zipball/gh-pages">Download <strong>ZIP File</strong></a></li>
+            <li><a href="http://github.com/codamic/hellhound/tarball/gh-pages">Download <strong>TAR Ball</strong></a></li>
+            <li><a href="http://github.com/codamic/hellhound">View On <strong>GitHub</strong></a></li>
+          </ul>
+        
+      </header>
+      <section>
+
+      <div align="center"><img src="https://github.com/Codamic/hellhound/raw/master/assets/hellhound-white.png" /></div>
+<p><br /></p>
+
+<p><strong>IMPORTANT NOTE</strong>: This software is not ready to use yet. It’s under heavy development
+and reaches the alpha stage pretty soon. If you like to be part of this process please
+leave us a message.</p>
+
+<h2 id="goals">Goals</h2>
+
+<p><strong>HellHound</strong> is a fullstack Clojure/ClojureScript framework for creating async distributed web applications suitbale for stream processing.
+Basically <strong>HellHound</strong> is a set of smaller tools to create such systems.</p>
+
+<p>The goal is to create a tool which allows developers to focus on their business logic while it takes care of different aspect of a distributed
+software in an opinionated way.</p>
+
+<h3 id="server-side">Server Side</h3>
+<p>Here is a breif description about the server side application, its requirements and design.</p>
+
+<h4 id="requirements">Requirements</h4>
+<p>The server side application should be:</p>
+
+<ul>
+  <li>Stateless</li>
+  <li>Scalable</li>
+  <li>Fault tolarance</li>
+  <li>Async</li>
+  <li>Extendable</li>
+</ul>
+
+<h4 id="design">Design</h4>
+<p>Each <strong>HellHound</strong> application should have a <code class="highlighter-rouge">system</code> which is a map of <code class="highlighter-rouge">components</code> with possible
+<code class="highlighter-rouge">workflows</code> and a <code class="highlighter-rouge">supervisor</code>. Basically <code class="highlighter-rouge">supervisor</code> is in charge of starting and stopping the system
+and dealing with any problem with the <code class="highlighter-rouge">system</code>. For example it should be able to automatically restart
+a <code class="highlighter-rouge">component</code> which is in a bad state.</p>
+
+<p>Each <code class="highlighter-rouge">component</code> has a start and stop function with some input and an output. A <code class="highlighter-rouge">workflows</code> simply
+describe data workflow in the <code class="highlighter-rouge">component</code> pipeline.</p>
+
+<h5 id="component-io">Component IO</h5>
+<p>TBA</p>
+
+<h5 id="webserver-component">WebServer Component</h5>
+<p>TBA</p>
+
+<h3 id="client-side">Client Side</h3>
+<p>Here is a breif description about the client side application, its requirements and design.</p>
+
+<h4 id="requirements-1">Requirements</h4>
+<p>The client side should able to:</p>
+
+<ul>
+  <li>Process a stream of incoming data</li>
+  <li>Set data as a stream of event to the server</li>
+  <li>Subscribe to a query result</li>
+</ul>
+
+<h4 id="design-1">Design</h4>
+<p>TBA</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add <strong>HellHound</strong> to your dependencies as follow:</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="n">codamic/hellhound</span><span class="w"> </span><span class="s">"1.0.0-SNAPSHOT"</span><span class="p">]</span><span class="w">
+</span></code></pre>
+</div>
+<h2 id="where-to-get-help">Where to get help</h2>
+<ul>
+  <li><a href="http://webchat.freenode.net/?channels=hellhound&amp;uio=d4">#hellhound</a> IRC channel on <a href="https://freenode.net/">freenode</a></li>
+  <li>#hellhound channel on <a href="http://clojurians.net/">clojurians</a></li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>TBA</p>
+<h2 id="how-to-contibute">How to contibute</h2>
+<p>TBA</p>
+<h2 id="license">License</h2>
+
+<p>Copyright © 2016-2017 Sameer Rahmani &lt;@lxsameer&gt;.</p>
+
+<p>Distributed under the MIT License.</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/codamic">codamic</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; © 2016-2017  <a href="https://codamic.tech">Codamic Technologies</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-101159792-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+  
+  </body>
+</html>
