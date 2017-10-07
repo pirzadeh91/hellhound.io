@@ -1,5 +1,16 @@
+@mixin border($w, $type, $color, $alpha) {
+	border: $w $type rgba($color, $alpha);
+	-o-border: $w $type rgba($color, $alpha);
+	-webkit-border: $w $type rgba($color, $alpha);
+	-moz-border: $w $type rgba($color, $alpha);
+	-ms-border: $w $type rgba($color, $alpha);
+}
+
+
 @mixin textShadow($x, $y, $blur, $color, $alpha) {
 	text-shadow: $x $y $blur rgba($color, $alpha);
 	-o-text-shadow: $x $y $blur rgba($color, $alpha);
 	-webkit-text-shadow: $x $y $blur rgba($color, $alpha);
+	-moz-text-shadow: $x $y $blur rgba($color, $alpha);
+	-ms-text-shadow: $x $y $blur rgba($color, $alpha);
 }

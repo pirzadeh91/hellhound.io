@@ -40,7 +40,7 @@
 }
 .hh-github {
 	a {
-		border: 2px solid rgba($dead_color, 1);
+		@include border(2px, solid, $dead_color, 1);
 		border-radius: 4px;
 		padding: 2px 48px;
 		color: $dead_color;
@@ -49,6 +49,7 @@
 		&:hover {
 			background-color: $dead_color;
 			color: $primary_color;
+			transition: all .2s linear;
 		}
 	}
 }
@@ -56,7 +57,7 @@
 	display: flex;
 	flex-direction: row;
 	margin-top: 10px;
-	border: 2px solid rgba($dead_color, 1);
+	@include border(2px, solid, $dead_color, 1);
 	border-radius: 4px;
 	&_item {
 		position: relative;
@@ -70,6 +71,7 @@
 			&:hover {
 				background-color: $dead_color;
 				color: $primary_color;
+				transition: all .2s linear;
 			}
 		}
 		&:first-child {

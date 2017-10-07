@@ -4,7 +4,7 @@
 	position: relative;
 	border-top: 1px solid rgba($dead_color, .1);
 	p {
-		font-size: $default_size;
+		font-size: $default_size - 2;
 		color: $dead_color;
 		margin: 14px 0;
 		letter-spacing: 0.032539rem;
