@@ -1,4 +1,4 @@
-@media screen and (min-width: 616px) {
+@media screen and (min-width: 606px) {
 	.hh-main_nav {
 		flex-direction: row;
 	}
@@ -7,6 +7,11 @@
 		margin-bottom: 36px;
 		font-size: $default_size + 4;
 	}
+	.hh-main_content {
+		max-width: 515px;
+		margin: 48px auto;
+		color: $dead_color;
+	}
 	.hh-footer {
 		p {
 			font-size: $default_size;
@@ -14,3 +19,8 @@
 	}
 }
 
+@media screen and (min-width: 828px) {
+	.hh-main_content {
+		max-width: 717px;
+	}
+}

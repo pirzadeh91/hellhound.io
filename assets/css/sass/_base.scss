@@ -1,4 +1,5 @@
 *, *::before, *::after { box-sizing: border-box; }
 body {
 	font-family: $base_font;
+	line-height: $lh;
 }

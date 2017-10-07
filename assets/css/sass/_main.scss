@@ -1,0 +1,40 @@
+.hh-main_content {
+	max-width: 313px;
+	margin: 48px auto;
+	color: $dead_color;
+	h2 {
+		font-size: $default-size * 2;
+		margin-top: 28px;
+		margin-bottom: 14px;
+	}
+	h4 {
+		font-size: $default-size * 2 - 6;
+		margin-top: 28px;
+		margin-bottom: 14px;
+	}
+	strong {
+		font-weight: bold;
+	}
+	ul {
+		padding-left: 28px;
+		li {
+			list-style-type: disc;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $primary_color;
+	}
+	code {
+		font-family: $code_font;
+		font-size: $default-size - 1;
+		font-weight: 200;
+		background-color: lighten($text_color, 50%);
+		span.n {
+			color: #7F3B7D;
+		}
+		span.s {
+			color: #E85151;
+		}
+	}
+}
