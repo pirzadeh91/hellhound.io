@@ -1,0 +1,11 @@
+@media screen and (min-width: 616px) {
+	.hh-main_nav {
+		flex-direction: row;
+	}
+	.hh-desc {
+		margin-top: 55px;
+		margin-bottom: 36px;
+		font-size: $default_size + 4;
+	}
+}
+

@@ -1,5 +1,4 @@
-<div align="center"><img src="https://github.com/Codamic/hellhound/raw/master/assets/hellhound-white.png" /></div>
-<br/>
+
 
 **IMPORTANT NOTE**: This software is not ready to use yet. It's under heavy development
 and reaches the alpha stage pretty soon. If you like to be part of this process please

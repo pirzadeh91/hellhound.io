@@ -40,7 +40,6 @@
     {% endif %}
 
     <meta name="twitter:creator" content="@lxsameer" />
-    <script src="https://use.fontawesome.com/3cd0899726.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -48,45 +47,45 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="hh-header">
-        <nav class="hh-main_nav">
-            <li class="hh-main_nav__item"><a href="{{ site.github.repository_url }}">Github</a></li>
-            <li class="hh-main_nav__item"><a href="{{ link.url }}">Docs</a></li>
-            <li class="hh-main_nav__item"><a href="">Support</a></li>
-        </nav>
-        <div class="hh-hero">
-            <h1>
-                <a href="/">
-                    <img class="logo" src="{{site.cover}}" alt="{{site.title}}" />
-                </a>
-            </h1>
+      <header>
+        {% if site.show_logo %}
+        <h1><a href="/"><img class="logo" src="{{site.url}}/assets/logo.png" alt="{{site.title}}" /></a></h1>
+        {% endif %}
 
-            {% if site.show_description %}
-            <p class="hh-desc">{{ site.description | default: site.github.project_tagline }}</p>
-            {% endif %}
+        {% if site.show_title %}
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        {% endif %}
 
-            {% if site.github.is_project_page %}
-              <p class="hh-github"><a target="_blank" href="{{ site.github.repository_url }}"><i class="fa fa-github"></i><small>{{ github_name }}</small></a></p>
-            {% endif %}
+        {% if site.show_description %}
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        {% endif %}
 
-            {% if site.github.is_user_page %}
-              <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-            {% endif %}
+        {% if site.github.is_project_page %}
+          <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
+        {% endif %}
 
-            {% if site.show_downloads %}
-              <ul class="hh-download">
-                <li class="hh-download_item"><a href="{{ site.github.zip_url }}"><span class="fa fa-file-archive-o"></span></a></li>
-                <li class="hh-download_item"><a href="{{ site.github.tar_url }}"><span class="fa fa-archive"></span></a></li>
-              </ul>
-            {% endif %}
-        </div>  
+        {% if site.github.is_user_page %}
+          <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %}
+
+        {% for link in site.menu %}
+          <p class="view"><a  href="{{ link.url }}">{{ link.title }}</a></p>
+        {% endfor %}
+
+        {% if site.show_downloads %}
+          <ul>
+            <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+            <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+            <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+          </ul>
+        {% endif %}
       </header>
       <section>
-      
-        {{ content }}
+
+      {{ content }}
 
       </section>
-      <footer class="hh-footer">
+      <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}

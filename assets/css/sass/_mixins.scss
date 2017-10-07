@@ -1,0 +1,5 @@
+@mixin textShadow($x, $y, $blur, $color, $alpha) {
+	text-shadow: $x $y $blur rgba($color, $alpha);
+	-o-text-shadow: $x $y $blur rgba($color, $alpha);
+	-webkit-text-shadow: $x $y $blur rgba($color, $alpha);
+}

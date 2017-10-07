@@ -5,7 +5,7 @@ show_logo: false
 show_downloads: true
 show_title: true
 show_description: true
-
+cover: /assets/logo.png
 google_analytics: UA-101159792-1
 
 repository: codamic/hellhound
@@ -17,6 +17,9 @@ github:
 
 permalink: /:categories/:title/
 markdown: kramdown
+
+sass:
+    sass_dir: assets/css/
 
 theme_color: hsl(215, 50%, 55%)
 theme: jekyll-theme-minimal

@@ -1,0 +1,81 @@
+.hh-header {}
+// Nav
+.hh-main_nav {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	justify-content: center;
+	&__item {
+		list-style-type: none;
+		text-align: center;
+		a {
+			display: $d_ib;
+			text-decoration: none;
+			color: $dead_color;
+			font-size: $default_size + 2;
+			padding: 28px 24px;
+			letter-spacing: 0.082865rem;
+			&:hover {
+				color: $primary_color;
+				@include textShadow(1px, 1px, 2px, $dead_color, .8);
+				transition: text-shadow .3s linear;
+			}
+		}
+	}
+}
+
+// Hero
+.hh-hero {
+	margin: 101px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $dead_color;
+}
+.hh-desc {
+	margin-top: 55px;
+	margin-bottom: 36px;
+	font-size: $default_size;
+	letter-spacing: 0.034839rem;
+}
+.hh-github {
+	a {
+		border: 2px solid rgba($dead_color, 1);
+		border-radius: 4px;
+		padding: 2px 48px;
+		color: $dead_color;
+		font-size: $default_size * 2;
+		vertical-align: middle;
+		&:hover {
+			background-color: $dead_color;
+			color: $primary_color;
+		}
+	}
+}
+.hh-download {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	border: 2px solid rgba($dead_color, 1);
+	border-radius: 4px;
+	&_item {
+		position: relative;
+		margin: 0;
+		a {
+			display: $d_ib;
+			color: $dead_color;
+			padding: 10px 21.5px;
+			font-size: $default_size + 4;
+			vertical-align: middle;
+			&:hover {
+				background-color: $dead_color;
+				color: $primary_color;
+			}
+		}
+		&:first-child {
+			a {
+				border-right: 2px solid rgba($dead_color, 1);
+			}
+		}
+	}
+}

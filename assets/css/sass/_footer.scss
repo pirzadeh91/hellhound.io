@@ -1,0 +1,19 @@
+.hh-footer {
+	text-align: center;
+	padding: 28px 0;
+	position: relative;
+	border-top: 1px solid rgba($dead_color, .1);
+	p {
+		font-size: $default_size;
+		color: $dead_color;
+		margin: 14px 0;
+		letter-spacing: 0.032539rem;
+		a {
+			color: $primary_color;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

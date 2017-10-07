@@ -1,7 +1,15 @@
 ---
 ---
 
-@import "jekyll-theme-minimal";
+/* @import "jekyll-theme-minimal"; */
+@import "sass/reset";
+@import "sass/variables";
+@import "sass/mixins";
+@import "sass/typography";
+@import "sass/base";
+@import "sass/header";
+@import "sass/footer";
+@import "sass/media";
 
 .logo {
   text-align: center;
